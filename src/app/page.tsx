@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Button } from '~/components/ui/button';
+import { Button, ButtonGroup } from '~/components/ui/button';
 import { Card, CardContent } from '~/components/ui/card';
 
 export default function Home() {
@@ -13,15 +13,12 @@ export default function Home() {
       />
       <Card className='bg-yellow-200 p-4 text-gray-700'>
         <CardContent>
-          <p>
-            ChoreBee is a task and reward system designed for kids. With
-            ChoreBee, you can create custom tasks for your child to complete,
-            and reward them with points that they can redeem for prizes or
-            privileges.
-          </p>
+          ChoreBee is a task and reward system designed for kids. With ChoreBee,
+          you can create custom tasks for your child to complete, and reward
+          them with points that they can redeem for prizes or privileges.
         </CardContent>
       </Card>
-      <div className='justify-between space-x-2'>
+      <ButtonGroup>
         <Button
           type='submit'
           className=' bg-yellow-200 px-4 py-2 text-lg font-bold text-gray-700 hover:bg-yellow-400 hover:shadow-lg'
@@ -34,7 +31,7 @@ export default function Home() {
         >
           Sign In
         </Button>
-      </div>
+      </ButtonGroup>
     </main>
   );
 }

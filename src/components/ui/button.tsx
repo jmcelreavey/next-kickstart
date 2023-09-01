@@ -52,4 +52,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = 'Button';
 
-export { Button, buttonVariants };
+const ButtonGroup = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('justify-between space-x-2 space-y-2', className)}
+    {...props}
+  />
+));
+ButtonGroup.displayName = 'ButtonGroup';
+
+export { Button, ButtonGroup, buttonVariants };
