@@ -15,48 +15,21 @@ export const env = createEnv({
    *
    * 💡 You'll get type errors if these are not prefixed with NEXT_PUBLIC_.
    */
-  client: {
-    /**
-     * @enable WebSockets
-     */
-    // NEXT_PUBLIC_PUSHER_APP_KEY: z.string().min(1),
-    // NEXT_PUBLIC_PUSHER_CLUSTER: z.string().min(1),
-  },
+  client: {},
   /**
    * Serverside Environment variables, not available on the client.
    * Will throw if you access these variables on the client.
    */
   server: {
     ANALYZE: toggle.default('false'),
-
-    /**
-     * @enable Drizzle
-     */
-    // DATABASE_URL: z.string().url(),
-
+    DATABASE_URL: z.string().url(),
     NODE_ENV: z
       .enum(['development', 'production', 'test'])
       .default('development'),
-
-    /**
-     * @enable NextAuth
-     */
-    // NEXTAUTH_GITHUB_ID: z.string().min(1),
-    // NEXTAUTH_GITHUB_SECRET: z.string().min(1),
-    // NEXTAUTH_SECRET: z.string().min(32),
-
-    /**
-     * @enable WebSockets
-     */
-    // PUSHER_APP_ID: z.string().min(1),
-    // PUSHER_SECRET: z.string().min(1),
-
-    /**
-     * Set PWA environment variable to true to enable PWA
-     * (in env.local and/or deployment environment variables)
-     * @enable PWA
-     */
-    PWA: toggle.default('false'),
+    NEXTAUTH_GITHUB_ID: z.string().min(1),
+    NEXTAUTH_GITHUB_SECRET: z.string().min(1),
+    NEXTAUTH_SECRET: z.string().min(32),
+    PWA: toggle.default('true'),
   },
   /**
    * Due to how Next.js bundles environment variables on Edge and Client,
@@ -68,37 +41,16 @@ export const env = createEnv({
     /**
      * Client
      */
-    /**
-     * @enable WebSockets
-     */
-    // NEXT_PUBLIC_PUSHER_APP_KEY: process.env.NEXT_PUBLIC_PUSHER_APP_KEY,
-    // NEXT_PUBLIC_PUSHER_CLUSTER: process.env.NEXT_PUBLIC_PUSHER_CLUSTER,
 
     /**
      * Server
      */
     ANALYZE: process.env.ANALYZE,
-
-    /**
-     * @enable Drizzle
-     */
-    // DATABASE_URL: process.env.DATABASE_URL,
-
+    DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
-
-    /**
-     * @enable NextAuth
-     */
-    // NEXTAUTH_GITHUB_ID: process.env.NEXTAUTH_GITHUB_ID,
-    // NEXTAUTH_GITHUB_SECRET: process.env.NEXTAUTH_GITHUB_SECRET,
-    // NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
-
-    /**
-     * @enable WebSockets
-     */
-    // PUSHER_APP_ID: process.env.PUSHER_APP_ID,
-    // PUSHER_SECRET: process.env.PUSHER_SECRET,
-
+    NEXTAUTH_GITHUB_ID: process.env.NEXTAUTH_GITHUB_ID,
+    NEXTAUTH_GITHUB_SECRET: process.env.NEXTAUTH_GITHUB_SECRET,
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     PWA: process.env.PWA,
   },
 });

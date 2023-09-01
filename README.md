@@ -1,4 +1,4 @@
-## next-kickstart
+# next-kickstart
 
 Feature packed Next.js 13.4 (app router) boilerplate. Zero setup. Edge ready.
 
@@ -45,7 +45,7 @@ export const runtime: ServerRuntime = 'nodejs';
 
 ### [TypeScript](https://www.typescriptlang.org/)
 
-- [`tsconfig.json`](tsconfig.json) - all modifications from [create-next-app](https://www.npmjs.com/
+- [`tsconfig.json`](tsconfig.json) - all modifications from [create-next-app]<https://www.npmjs.com/>
 - [`types/reset.d.ts`](types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset)
 
 ## 🌱 Getting started
@@ -74,11 +74,6 @@ export const runtime: ServerRuntime = 'nodejs';
   ```
 
 ## ⚙️ Configuration
-
-### [TypeScript](https://www.typescriptlang.org/)
-
-- [`tsconfig.json`](tsconfig.json) - all modifications from [create-next-app](https://www.npmjs.com/package/create-next-app) are explained with comments
-- [`types/reset.d.ts`](types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset) to increase type-safety
 
 ### [T3 Env](https://github.com/t3-oss/t3-env)
 
@@ -119,6 +114,7 @@ export const runtime: ServerRuntime = 'nodejs';
 
 - [`src/app/examples/client-component/page.tsx`](src/app/examples/client-component/page.tsx) - use in a client component
 - [`src/app/examples/server-component/page.tsx`](src/app/examples/server-component/page.tsx) - use in a server component
+- [`src/app/examples/websockets/page.tsx`](src/app/examples/websockets/page.tsx)
 
 ### [WebSockets with Pusher](https://pusher.com)
 
@@ -127,10 +123,6 @@ export const runtime: ServerRuntime = 'nodejs';
 - [`src/hooks/useEvent.ts`](src/hooks/useEvent.ts)
 - [`src/lib/events.ts`](src/lib/events.ts)
 - [`src/trpc/methods.ts`](src/trpc/methods.ts)
-
-#### Examples
-
-- [`src/app/examples/websockets/page.tsx`](src/app/examples/websockets/page.tsx)
 
 ### [Drizzle](https://orm.drizzle.team/)
 
